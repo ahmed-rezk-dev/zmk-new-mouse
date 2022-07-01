@@ -54,17 +54,9 @@
 
 / { 
     macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &mkp MCLK>
-                , <&macro_tap &kp R>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
+        #include "macros.dtsi"
     };
+
     combos {
         compatible = "zmk,combos";
         // combo into Function layer
